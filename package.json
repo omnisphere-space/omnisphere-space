@@ -1,0 +1,22 @@
+{
+  "name": "omnisphere-space",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "wrangler pages deploy dist"
+  },
+  "dependencies": {
+    "astro": "^7.3.5",
+    "lucide-astro": "^0.441.0",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@rolldown/binding-darwin-x64": "^1.2.12",
+    "@tailwindcss/vite": "^4.3.3",
+    "wrangler": "^4.147.0"
+  }
+}

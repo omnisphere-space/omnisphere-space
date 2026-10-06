@@ -1,0 +1,22 @@
+---
+import Logo from './Logo.astro';
+---
+
+<header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(7, 4, 15, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(168, 85, 247, 0.2);">
+  <div class="container" style="height: 80px; display: flex; align-items: center; justify-content: space-between;">
+    <a href="/" style="text-decoration: none;">
+      <Logo size={42} showText={true} />
+    </a>
+
+    <nav style="display: flex; gap: 2.5rem;" class="font-mono">
+      <a href="#satellites" style="color: #cbd5e1; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;">Satellites</a>
+      <a href="#subsystems" style="color: #cbd5e1; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;">Subsystems</a>
+      <a href="#launch" style="color: #cbd5e1; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;">Launch</a>
+      <a href="#about" style="color: #cbd5e1; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;">About</a>
+    </nav>
+
+    <div>
+      <a href="#contact" class="btn-primary">Initiate Mission</a>
+    </div>
+  </div>
+</header>

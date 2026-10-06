@@ -1,0 +1,92 @@
+---
+interface Props {
+  size?: number;
+  showText?: boolean;
+}
+
+const { size = 44, showText = true } = Astro.props;
+---
+
+<div style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+  <svg 
+    style={`width: ${size}px; height: ${size}px; min-width: ${size}px; min-height: ${size}px; flex-shrink: 0;`} 
+    viewBox="0 0 512 512" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <radialGradient id="spaceBgLogo" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#14213d"/>
+        <stop offset="70%" stop-color="#0b1329"/>
+        <stop offset="100%" stop-color="#060b18"/>
+      </radialGradient>
+      <radialGradient id="globeGradLogo" cx="42%" cy="42%" r="55%">
+        <stop offset="0%" stop-color="#5fa8d3"/>
+        <stop offset="50%" stop-color="#244b7a"/>
+        <stop offset="100%" stop-color="#0e213b"/>
+      </radialGradient>
+      <linearGradient id="goldMetallicLogo" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#8c5828"/>
+        <stop offset="35%" stop-color="#d4af37"/>
+        <stop offset="70%" stop-color="#f9df88"/>
+        <stop offset="100%" stop-color="#ffffff"/>
+      </linearGradient>
+      <linearGradient id="bronzeRingLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#e2c275"/>
+        <stop offset="50%" stop-color="#9a7b4f"/>
+        <stop offset="100%" stop-color="#4a3622"/>
+      </linearGradient>
+      <linearGradient id="rocketBodyLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="45%" stop-color="#dbe4ee"/>
+        <stop offset="85%" stop-color="#738a9c"/>
+        <stop offset="100%" stop-color="#486581"/>
+      </linearGradient>
+      <linearGradient id="exhaustFlameLogo" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="40%" stop-color="#f59e0b"/>
+        <stop offset="100%" stop-color="#d97706"/>
+      </linearGradient>
+    </defs>
+
+    <circle cx="256" cy="256" r="248" fill="url(#spaceBgLogo)"/>
+    <circle cx="256" cy="256" r="195" stroke="#1d3557" stroke-width="18" opacity="0.6"/>
+    
+    <!-- Earth Globe -->
+    <g>
+      <circle cx="256" cy="265" r="74" fill="url(#globeGradLogo)" stroke="#64b5f6" stroke-width="3" stroke-opacity="0.5"/>
+      <path d="M228 225 C238 215, 252 216, 260 226 C266 234, 258 244, 246 248 C238 251, 230 244, 224 236 Z" fill="#e2c275" opacity="0.65"/>
+      <path d="M255 255 C268 252, 282 260, 285 272 C280 286, 264 298, 250 304 C244 294, 247 282, 255 275 Z" fill="#e2c275" opacity="0.65"/>
+    </g>
+
+    <!-- Orbits -->
+    <ellipse cx="256" cy="260" rx="165" ry="62" stroke="url(#bronzeRingLogo)" stroke-width="8" transform="rotate(-22 256 260)"/>
+    <ellipse cx="256" cy="260" rx="172" ry="54" stroke="#7ea8be" stroke-width="6" transform="rotate(35 256 260)" stroke-dasharray="14 8"/>
+    <ellipse cx="256" cy="260" rx="160" ry="72" stroke="url(#bronzeRingLogo)" stroke-width="7" transform="rotate(78 256 260)"/>
+
+    <circle cx="152" cy="340" r="10" fill="url(#goldMetallicLogo)"/>
+    <circle cx="370" cy="335" r="9" fill="#7ea8be"/>
+
+    <!-- Rocket Ascending -->
+    <path d="M 180 395 C 150 330 190 230 335 155" stroke="url(#goldMetallicLogo)" stroke-width="16" stroke-linecap="round"/>
+    <g transform="translate(346, 142) rotate(42)">
+      <path d="M -8 32 C -10 46 -3 62 0 68 C 3 62 10 46 8 32 Z" fill="url(#exhaustFlameLogo)"/>
+      <path d="M -15 16 L -30 34 L -15 30 Z" fill="url(#goldMetallicLogo)"/>
+      <path d="M 15 16 L 30 34 L 15 30 Z" fill="url(#goldMetallicLogo)"/>
+      <path d="M 0 -44 C 18 -25 20 6 16 32 L -16 32 C -20 6 -18 -25 0 -44 Z" fill="url(#rocketBodyLogo)" stroke="#102a43" stroke-width="3"/>
+      <path d="M 0 -44 C 10 -32 14 -20 14 -12 L -14 -12 C -14 -20 -10 -32 0 -44 Z" fill="#d97706"/>
+      <circle cx="0" cy="4" r="8" fill="#0b1329" stroke="url(#goldMetallicLogo)" stroke-width="3.5"/>
+    </g>
+  </svg>
+
+  {showText && (
+    <div style="display: flex; flex-direction: column; text-align: left;">
+      <span class="font-display" style="font-weight: 800; font-size: 1.15rem; letter-spacing: 0.18em; text-transform: uppercase; color: #ffffff; line-height: 1.1;">
+        Omni<span style="background: linear-gradient(90deg, #c084fc, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">sphere</span>
+      </span>
+      <span class="font-mono" style="font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: #c084fc;">
+        Space Technologies
+      </span>
+    </div>
+  )}
+</div>

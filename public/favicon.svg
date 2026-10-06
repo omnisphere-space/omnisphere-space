@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background Circle Radial Gradient -->
+    <radialGradient id="spaceBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#14213d"/>
+      <stop offset="70%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#060b18"/>
+    </radialGradient>
+
+    <!-- Globe Gradient -->
+    <radialGradient id="globeGrad" cx="42%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#5fa8d3"/>
+      <stop offset="50%" stop-color="#244b7a"/>
+      <stop offset="100%" stop-color="#0e213b"/>
+    </radialGradient>
+
+    <!-- Golden Orbit / Thrust Plume Gradient -->
+    <linearGradient id="goldMetallic" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8c5828"/>
+      <stop offset="35%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#f9df88"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <!-- Secondary Ring Metallic -->
+    <linearGradient id="bronzeRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2c275"/>
+      <stop offset="50%" stop-color="#9a7b4f"/>
+      <stop offset="100%" stop-color="#4a3622"/>
+    </linearGradient>
+
+    <!-- Rocket Body Silver/Steel -->
+    <linearGradient id="rocketBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#dbe4ee"/>
+      <stop offset="85%" stop-color="#738a9c"/>
+      <stop offset="100%" stop-color="#486581"/>
+    </linearGradient>
+
+    <!-- Thruster Fire Glow -->
+    <linearGradient id="exhaustFlame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Navy Base Canvas -->
+  <circle cx="256" cy="256" r="248" fill="url(#spaceBg)"/>
+
+  <!-- Outer Structural Ring Layer (Multi-orbit halo) -->
+  <circle cx="256" cy="256" r="195" stroke="#1d3557" stroke-width="18" opacity="0.6"/>
+  <circle cx="256" cy="256" r="172" stroke="#457b9d" stroke-width="6" opacity="0.35"/>
+
+  <!-- Core Planet / Earth -->
+  <g>
+    <circle cx="256" cy="265" r="74" fill="url(#globeGrad)" stroke="#64b5f6" stroke-width="3" stroke-opacity="0.5"/>
+    <!-- Continental Silhouettes -->
+    <path d="M228 225 C238 215, 252 216, 260 226 C266 234, 258 244, 246 248 C238 251, 230 244, 224 236 Z" fill="#e2c275" opacity="0.65"/>
+    <path d="M255 255 C268 252, 282 260, 285 272 C280 286, 264 298, 250 304 C244 294, 247 282, 255 275 Z" fill="#e2c275" opacity="0.65"/>
+    <path d="M210 262 C216 258, 225 264, 224 274 C218 285, 212 280, 210 262 Z" fill="#e2c275" opacity="0.5"/>
+  </g>
+
+  <!-- Background Orbit Ellipses -->
+  <!-- Orbit 1: Horizontal tilted -->
+  <ellipse cx="256" cy="260" rx="165" ry="62" stroke="url(#bronzeRing)" stroke-width="8" transform="rotate(-22 256 260)"/>
+  <!-- Orbit 2: Steeper incline -->
+  <ellipse cx="256" cy="260" rx="172" ry="54" stroke="#7ea8be" stroke-width="6" transform="rotate(35 256 260)" stroke-dasharray="14 8"/>
+  <!-- Orbit 3: Transverse ellipse -->
+  <ellipse cx="256" cy="260" rx="160" ry="72" stroke="url(#bronzeRing)" stroke-width="7" transform="rotate(78 256 260)"/>
+  <!-- Orbit 4: Sweeping outer halo -->
+  <ellipse cx="256" cy="260" rx="180" ry="46" stroke="#486581" stroke-width="5" transform="rotate(-58 256 260)"/>
+
+  <!-- Orbital Nodes & Satellites -->
+  <!-- Top-left Satellite -->
+  <g transform="translate(190, 125) rotate(-35)">
+    <rect x="-14" y="-3" width="28" height="6" rx="2" fill="#7ea8be"/>
+    <rect x="-4" y="-7" width="8" height="14" rx="2" fill="#f4d06f"/>
+  </g>
+  <!-- Orbiting Spherical Nodes -->
+  <circle cx="152" cy="340" r="10" fill="url(#goldMetallic)"/>
+  <circle cx="370" cy="335" r="9" fill="#7ea8be"/>
+  <circle cx="340" cy="180" r="7" fill="#f4d06f"/>
+  <circle cx="165" cy="205" r="6" fill="#ffffff"/>
+
+  <!-- Foreground Dynamic Launch Swoosh (Thrust Track) -->
+  <path d="M 180 395 C 150 330 190 230 335 155" stroke="url(#goldMetallic)" stroke-width="16" stroke-linecap="round"/>
+  <path d="M 184 390 C 158 335 195 238 332 160" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Ascending Rocket -->
+  <!-- Anchor coordinates at (345, 145) angled along vector (~ -42 deg) -->
+  <g transform="translate(346, 142) rotate(42)">
+    <!-- Exhaust Plume -->
+    <path d="M -8 32 C -10 46 -3 62 0 68 C 3 62 10 46 8 32 Z" fill="url(#exhaustFlame)"/>
+    <path d="M -4 32 C -5 40 0 50 0 54 C 0 50 5 40 4 32 Z" fill="#ffffff"/>
+
+    <!-- Left & Right Aero Fins -->
+    <path d="M -15 16 L -30 34 L -15 30 Z" fill="url(#goldMetallic)"/>
+    <path d="M 15 16 L 30 34 L 15 30 Z" fill="url(#goldMetallic)"/>
+
+    <!-- Main Rocket Fuselage -->
+    <path d="M 0 -44 C 18 -25 20 6 16 32 L -16 32 C -20 6 -18 -25 0 -44 Z" fill="url(#rocketBody)" stroke="#102a43" stroke-width="3"/>
+    
+    <!-- Nosecone Cap -->
+    <path d="M 0 -44 C 10 -32 14 -20 14 -12 L -14 -12 C -14 -20 -10 -32 0 -44 Z" fill="#d97706"/>
+    
+    <!-- Porthole Window -->
+    <circle cx="0" cy="4" r="8" fill="#0b1329" stroke="url(#goldMetallic)" stroke-width="3.5"/>
+    <circle cx="2" cy="2" r="2.5" fill="#ffffff"/>
+
+    <!-- Stage Separation Ring -->
+    <line x1="-16" y1="20" x2="16" y2="20" stroke="#d97706" stroke-width="3"/>
+  </g>
+
+  <!-- Distant Navigation Star Flares -->
+  <g fill="#ffffff" opacity="0.85">
+    <!-- Top Left -->
+    <path d="M 52 70 Q 52 82 40 82 Q 52 82 52 94 Q 52 82 64 82 Q 52 82 52 70 Z"/>
+    <!-- Top Right -->
+    <path d="M 460 62 Q 460 74 448 74 Q 460 74 460 86 Q 460 74 472 74 Q 460 74 460 62 Z"/>
+    <!-- Bottom Left -->
+    <path d="M 56 425 Q 56 435 46 435 Q 56 435 56 445 Q 56 435 66 435 Q 56 435 56 425 Z"/>
+    <!-- Bottom Right -->
+    <path d="M 456 430 Q 456 440 446 440 Q 456 440 456 450 Q 456 440 466 440 Q 456 440 456 430 Z"/>
+  </g>
+</svg>

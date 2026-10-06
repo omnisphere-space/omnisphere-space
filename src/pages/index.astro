@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Logo from '../components/Logo.astro';
+---
+
+<Layout title="Omnisphere Space Technologies | Conquering the Cosmos">
+  <Navbar />
+
+  <!-- Hero Section -->
+  <main style="position: relative; z-index: 10; padding-top: 160px; padding-bottom: 80px;">
+    <section class="container" style="text-align: center; max-width: 900px; margin: 0 auto;">
+      
+      <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px; background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.35); color: #c084fc; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 2rem;" class="font-mono">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #38bdf8; display: inline-block;"></span>
+        Full-Stack Orbital Infrastructure
+      </div>
+
+      <h1 class="font-display" style="font-size: clamp(2.8rem, 6vw, 5.2rem); font-weight: 800; line-height: 1.05; text-transform: uppercase; letter-spacing: -0.02em; color: #ffffff;">
+        Conquering <br/>
+        <span style="background: linear-gradient(90deg, #c084fc 0%, #e879f9 50%, #fbbf24 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          The Cosmos
+        </span>
+      </h1>
+
+      <p style="margin: 1.8rem auto 2.5rem; max-width: 650px; color: #cbd5e1; font-size: 1.1rem; font-weight: 300;">
+        Omnisphere provides turnkey small-satellite architectures, precision cryogenic rocket subsystems, and dedicated payload delivery for multi-orbit applications.
+      </p>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="#satellites" class="btn-primary">Explore Platforms</a>
+        <a href="#contact" class="btn-secondary">Mission Inquiries</a>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="grid-4" style="margin-top: 5rem; text-align: left;">
+        <div class="card" style="padding: 1.4rem;">
+          <div class="font-mono" style="font-size: 0.7rem; color: #c084fc; text-transform: uppercase; letter-spacing: 0.15em;">Payload Envelope</div>
+          <div class="font-display" style="font-size: 1.8rem; font-weight: 700; color: #ffffff; margin: 4px 0;">3U to 24U</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">CubeSat & ESPA-class compatible</div>
+        </div>
+
+        <div class="card" style="padding: 1.4rem;">
+          <div class="font-mono" style="font-size: 0.7rem; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.15em;">Target Incline</div>
+          <div class="font-display" style="font-size: 1.8rem; font-weight: 700; color: #ffffff; margin: 4px 0;">LEO / SSO</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">400 km - 800 km direct deployment</div>
+        </div>
+
+        <div class="card" style="padding: 1.4rem;">
+          <div class="font-mono" style="font-size: 0.7rem; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.15em;">Manufacturing</div>
+          <div class="font-display" style="font-size: 1.8rem; font-weight: 700; color: #ffffff; margin: 4px 0;">AS9100D</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Sub-10 micron aerospace CNC & DMLS</div>
+        </div>
+
+        <div class="card" style="padding: 1.4rem;">
+          <div class="font-mono" style="font-size: 0.7rem; color: #f472b6; text-transform: uppercase; letter-spacing: 0.15em;">Mission Track</div>
+          <div class="font-display" style="font-size: 1.8rem; font-weight: 700; color: #ffffff; margin: 4px 0;">&lt; 90 Days</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Accelerated payload integration</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions / Domains -->
+    <section id="satellites" class="container" style="margin-top: 7rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span class="font-mono" style="font-size: 0.75rem; color: #fbbf24; letter-spacing: 0.25em; text-transform: uppercase;">Engineering Verticals</span>
+          <h2 class="font-display" style="font-size: 2.5rem; font-weight: 700; color: #ffffff; margin-top: 4px;">Integrated Space Hardware</h2>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.9rem; max-width: 440px;">
+          Modular satellite buses, stage separation rings, and automated ground communications designed for maximum mission reliability.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <span class="font-mono" style="font-size: 0.72rem; color: #c084fc; letter-spacing: 0.2em; text-transform: uppercase;">Domain 01</span>
+          <h3 class="font-display" style="font-size: 1.4rem; font-weight: 700; color: #ffffff; margin: 0.5rem 0 1rem;">Orbital Satellites</h3>
+          <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6;">
+            Configurable microsatellite buses offering 3-axis reaction stabilization, redundant battery power systems, and multi-spectral sensor payloads.
+          </p>
+          <div style="margin-top: 1.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.78rem;" class="font-mono">
+            <div style="display: flex; justify-content: space-between; color: #cbd5e1; margin-bottom: 6px;">
+              <span>Pointing</span><span style="color: #fbbf24;">&lt; 0.003° RMS</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: #cbd5e1;">
+              <span>Payload</span><span style="color: #fbbf24;">Up to 120 kg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="subsystems">
+          <span class="font-mono" style="font-size: 0.72rem; color: #38bdf8; letter-spacing: 0.2em; text-transform: uppercase;">Domain 02</span>
+          <h3 class="font-display" style="font-size: 1.4rem; font-weight: 700; color: #ffffff; margin: 0.5rem 0 1rem;">Propulsion Hardware</h3>
+          <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6;">
+            Propellant management systems, cryogenic valves, titanium pressure vessels, and gimbal stage assemblies built for harsh thermal dynamics.
+          </p>
+          <div style="margin-top: 1.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.78rem;" class="font-mono">
+            <div style="display: flex; justify-content: space-between; color: #cbd5e1; margin-bottom: 6px;">
+              <span>Alloy Specs</span><span style="color: #38bdf8;">Inconel 718</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: #cbd5e1;">
+              <span>Proof Pressure</span><span style="color: #38bdf8;">450 Bar Burst</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="launch">
+          <span class="font-mono" style="font-size: 0.72rem; color: #fbbf24; letter-spacing: 0.2em; text-transform: uppercase;">Domain 03</span>
+          <h3 class="font-display" style="font-size: 1.4rem; font-weight: 700; color: #ffffff; margin: 0.5rem 0 1rem;">Orbital Deployment</h3>
+          <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6;">
+            Low-shock orbital separation canisters, mission licensing support, and autonomous telemetry tracking from dedicated ground arrays.
+          </p>
+          <div style="margin-top: 1.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.78rem;" class="font-mono">
+            <div style="display: flex; justify-content: space-between; color: #cbd5e1; margin-bottom: 6px;">
+              <span>Ejection Mech</span><span style="color: #fbbf24;">Pneumatic Soft</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: #cbd5e1;">
+              <span>Frequencies</span><span style="color: #fbbf24;">S / X / UHF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Inquiry Banner -->
+    <section id="contact" class="container" style="margin-top: 6rem;">
+      <div class="card" style="text-align: center; padding: 4rem 2rem; border-color: rgba(168, 85, 247, 0.4);">
+        <h2 class="font-display" style="font-size: 2.4rem; font-weight: 800; color: #ffffff; text-transform: uppercase;">
+          Book Your Orbital Launch Window
+        </h2>
+        <p style="max-width: 550px; margin: 1rem auto 2rem; color: #cbd5e1; font-size: 0.95rem;">
+          Connect with our aerospace engineering team to define mission requirements, deployer specs, and flight verification timelines.
+        </p>
+        <a href="mailto:missions@omnisphere.space" class="btn-primary">
+          Contact Mission Control
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with constrained SVG logo -->
+  <footer style="position: relative; z-index: 10; border-top: 1px solid rgba(168, 85, 247, 0.15); padding: 3rem 0; background: #05030b;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+      <Logo size={36} showText={true} />
+      <div class="font-mono" style="font-size: 0.75rem; color: #94a3b8;">
+        © {new Date().getFullYear()} Omnisphere Space Technologies. All systems nominal.
+      </div>
+      <div class="font-mono" style="display: flex; gap: 1.5rem; font-size: 0.75rem;">
+        <a href="#" style="color: #c084fc; text-decoration: none;">Security</a>
+        <a href="#" class="hover:text-white" style="color: #94a3b8; text-decoration: none;">ITAR Compliance</a>
+        <a href="#" style="color: #94a3b8; text-decoration: none;">Telemetry API</a>
+      </div>
+    </div>
+  </footer>
+</Layout>
