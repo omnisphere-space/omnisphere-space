@@ -17,6 +17,9 @@
   "devDependencies": {
     "@rolldown/binding-darwin-x64": "^1.2.12",
     "@tailwindcss/vite": "^4.3.3",
-    "wrangler": "^4.147.0"
+    "wrangler": "^4.148.0"
+  },
+  "overrides": {
+    "sharp": "^0.35.5"
   }
 }
